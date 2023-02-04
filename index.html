@@ -1,0 +1,48 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html {
+            background: radial-gradient(rgb(51, 51, 51),black);
+            }
+
+            #typewriter {
+                color: white;
+                position: absolute;
+                font-size: 60px;
+                font-family: 'B612', sans-serif;
+                font-weight: 700;
+                width: 1000px;
+                margin: 350px 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+        <div id="typewriter">
+        </div>
+    </body>
+    <script>
+        const instance = new Typewriter('#typewriter', {
+            loop: true
+        });
+
+        instance.typeString("")
+            .pauseFor(1000)
+            .typeString("Hello there!")
+            .deleteAll()
+            .typeString('My name is Jerremy.')
+            .pauseFor(1000)
+            .deleteAll()
+            .typeString("Welcome to my GitHub Profile!")
+            .pauseFor(1300)
+            .start();
+            </script>
+
+</html>
